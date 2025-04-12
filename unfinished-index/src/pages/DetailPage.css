@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: auto;
 }
 
 .modal-content {
@@ -25,7 +26,6 @@
   animation: fadeIn 0.3s ease;
   overflow: auto;
   justify-content: center;
-  overflow: hidden;
 }
 
 .detail-clickable {
@@ -134,20 +134,18 @@
 
 @media (max-width: 768px) {
   .modal-overlay {
-    overflow: auto;
-  }
-
-  .detial-info{
-    align-items: center;
+    overflow-y: auto;
   }
 
   .modal-content {
+    overflow-y: auto;
     padding-top: 4rem;
     padding-bottom: 0;
   }
 
   .modal-close {
-    margin-top: 0; 
+    margin-top: 2rem; 
+    margin-bottom: 140px;
   }
 
   /*.detail-images {
