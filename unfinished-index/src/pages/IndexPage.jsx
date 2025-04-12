@@ -38,17 +38,19 @@ export default function IndexPage() {
                 //Get unique filter values
                 setUniqueCities([...new Set(data.map((item) => item.city))])
                 setUniqueTypologies([...new Set(data.map((item) => item.typology))])
-                setUniqueMaterials([...new Set(data.map((item) => item.material))])
-
-                if (!initialFilters.sortBy) {
-                    const defaultFilters = { ...initialFilters, sortBy: 'entrynumber', order: 'asc' }
-                    setFilters(defaultFilters)
-                    const searchParams = new URLSearchParams(defaultFilters)
-                    navigate({ search: searchParams.toString() }, { replace: true })
-                }
+                setUniqueMaterials([...new Set(data.map((item) => item.material))])                
             })
             .catch(console.error)
     }, [])
+
+    useEffect(() => {
+        if (!filters.sortBy && entries.length > 0) {
+            const defaultFilters = { ...filters, sortBy: 'entrynumber', order: 'asc' }
+            setFilters(defaultFilters)
+            const searchParams = new URLSearchParams(defaultFilters)
+            navigate({ search: searchParams.toString() }, { replace: true })
+        }
+    }, [filters, entries])
 
     useEffect(() => {
         filterAndSortEntries()
