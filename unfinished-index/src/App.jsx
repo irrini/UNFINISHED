@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route path="/index" element={<IndexPage />} />
+          <Route path="/indexpage" element={<IndexPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/submit" element={<Submit />} />
           <Route path="/map" element={<Map />} />

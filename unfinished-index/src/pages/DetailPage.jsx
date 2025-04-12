@@ -38,7 +38,7 @@ export default function DetailPage() {
         if (!value) return
         const searchParams = new URLSearchParams()
         searchParams.set(filterType, value) //Set the filter in URL
-        navigate(`/index?${searchParams.toString()}`) //Redirect to IndexPage with filters applied
+        navigate(`/indexpage?${searchParams.toString()}`) //Redirect to IndexPage with filters applied
     }    
 
     if (!entry) return <div>Loading...</div>
