@@ -1,0 +1,103 @@
+.index-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  .index-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  position: relative;
+  overflow-x: auto;
+  top: 2rem;
+}
+
+.index-table th,
+.index-table td {
+  border-bottom: 1px solid #ddd;
+  color: black;
+  padding: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+    
+}
+
+.index-table th:hover {
+  background-color: #535bf246;
+}
+
+.index-table tbody tr:hover {
+  background-color: #535bf246;
+}
+
+.hover-image-overlay {
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none; /* So it doesn't block interactions */
+    z-index: 1000;
+}
+
+.hover-image {
+    max-width: 10vw;
+    max-height: auto;
+    object-fit: contain;   
+    pointer-events: none;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #535bf246;
+  /*color: #535bf2;*/
+}
+
+.dropdown-item.active {  
+  color: #000000;
+  font-weight: 700;
+}
+
+.dropdown-item.clear {
+  color: #ff4545;
+}
+
+.active-filter-header {
+  font-weight: bold;
+}
+
+/* Arrows */
+.index-table th {
+  user-select: none;
+}
+
+.index-table th::after {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .index-table {
+        overflow-x: scroll;
+        table-layout: auto;
+    }
+}
+
+  

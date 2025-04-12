@@ -1,0 +1,41 @@
+.submit {
+    margin: 4rem 2rem;
+    display: flex;
+}
+
+form .input-box {
+    margin-top: 2rem;
+}
+
+form .input-file {
+    margin-top: 2rem;
+}
+
+.input-box .field {
+    width: 130%;
+    height: 2rem;
+    background: transparent;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    outline: none;
+    margin-top: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.input-box .field.message {
+    height: 200px;
+    resize: none;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+form button {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .input-box .field {
+        width: 100%;
+    }
+}

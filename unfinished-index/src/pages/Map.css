@@ -1,0 +1,26 @@
+.leaflet-container {
+    height: 90vh;
+    
+}
+
+.map-container {
+    margin: 4rem 2rem;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0.4rem;
+}
+
+.leaflet-popup-content a {
+    color: black;
+}
+
+.leaflet-popup-content img {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin: 4rem 1.5rem;
+    }
+}

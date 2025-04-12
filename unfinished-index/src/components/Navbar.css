@@ -1,0 +1,44 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    text-align: center;  
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 3;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    padding: 0 1rem;
+            
+  }
+  
+  .inactive-link {
+    
+    color: #000000;
+  }
+  
+  .active-link {
+    color:#000000;
+    
+    font-weight: 800;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-wrap: wrap;
+    }
+  }
